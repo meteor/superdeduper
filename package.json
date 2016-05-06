@@ -1,0 +1,25 @@
+{
+  "name": "superdeduper",
+  "version": "1.0.0",
+  "description": "A Super-Deduper for npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteor/superdeduper.git"
+  },
+  "author": "Tom Coleman, MDG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meteor/superdeduper/issues"
+  },
+  "homepage": "https://github.com/meteor/superdeduper#readme",
+  "dependencies": {
+    "babel-register": "^6.8.0",
+    "lodash": "^4.11.2",
+    "logic-solver": "^2.0.0",
+    "npm": "^3.8.8"
+  }
+}
