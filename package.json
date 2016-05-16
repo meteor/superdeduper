@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha lib/constraint-solver/tests/constraint-solver-tests.js lib/constraint-solver/catalog/catalog-cache-tests.js lib/constraint-solver/package-version-parser/package-version-parser-tests.js lib/constraint-solver/datatypes/datatypes-tests.js"
+    "test": "mocha lib/constraint-solver/**/*tests.js"
   },
   "repository": {
     "type": "git",
