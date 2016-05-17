@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha lib/constraint-solver/**/*tests.js"
+    "test": "mocha lib/constraint-solver/**/*tests.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
     "babel-register": "^6.8.0",
     "lodash": "^4.11.2",
     "logic-solver": "^2.0.1",
-    "npm": "^3.8.8"
+    "npm": "^3.8.8",
+    "semver": "^5.1.0"
   },
   "eslintConfig": {
     "parserOptions": {
