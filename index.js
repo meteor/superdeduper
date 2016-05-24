@@ -2,16 +2,18 @@ require('babel-register');
 var fs = require('fs');
 var _ = require('lodash');
 
-const dependencies = _.keys(require('./package.json').dependencies);
-
 // basically for testing whilst I'm on the plane
 const METADATA_CACHE = './metadata.cache.json';
 var promise;
 
+var packageJsonFile = process.argv[2];
+var packageJson = JSON.parse(fs.readFileSync(packageJsonFile))
+const dependencies = _.keys(packageJson.dependencies);
+
 try {
   promise = Promise.resolve(JSON.parse(fs.readFileSync(METADATA_CACHE)));
 } catch (e) {
-  promise = require('./lib/fetch.js').then(metadata => {
+  promise = require('./lib/fetch.js')(packageJson).then(metadata => {
     fs.writeFileSync(METADATA_CACHE, JSON.stringify(metadata));
     return metadata;
   });
